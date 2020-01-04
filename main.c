@@ -7,6 +7,19 @@
  */
 int main(int argc, char *argv[])
 {
+	if (argc != 2)
+	{
+		printf("USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
 
-exit(EXIT_SUCCESS);
+	FILE *commander;
+	commander = fopen(argv[1],"r");
+	if (!commander)
+	{
+		printf("Error: Can't open file <file>\n");
+		exit(EXIT_FAILURE);
+	}
+
+	exit(EXIT_SUCCESS);
 }
