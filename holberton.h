@@ -1,7 +1,13 @@
 #ifndef holberton_h
 #define holberton_h
-#include <stdio.h>
+
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
