@@ -45,5 +45,6 @@ int main(int argc, char *argv[])
 		}
 	}
 	free(stack);
+	fclose(commander);
 	exit(EXIT_SUCCESS);
 }
