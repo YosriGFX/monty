@@ -1,4 +1,7 @@
 #include "monty.h"
+
+unsigned int line_number = 0;
+
 /**
  * main - Monty
  * @argc: int
@@ -24,7 +27,6 @@ int main(int argc, char *argv[])
 	}
 
 	char *liners = NULL, *opcode = NULL;
-	unsigned int line_number = 0;
 	size_t n = 0;
 	stack_t *stack = NULL;
 
