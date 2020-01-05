@@ -6,9 +6,6 @@
 #include <unistd.h>
 #include <string.h>
 
-#define instruction_t _instruction_t
-#define stack_t _stack_t
-
 extern unsigned int line_number;
 
 /**
