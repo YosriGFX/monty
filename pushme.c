@@ -14,13 +14,13 @@ void pushme(stack_t **stack, unsigned int line_number)
 	{
 		if (!_push(stack, atoi(argument)))
 		{
-			dprintf(STDERR_FILENO, "Error: malloc failed\n");
+			fprintf(stderr, "Error: malloc failed\n");
 			exit(EXIT_FAILURE);
 		}
 	}
 	else
 	{
-		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	stack = NULL;

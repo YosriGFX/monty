@@ -6,15 +6,14 @@
  */
 void pallme(stack_t **stack, unsigned int line_number)
 {
+	stack_t *printer = *stack;
+        (void)line_number;
+
 	if (*stack == NULL)
 		return;
-
-	stack_t *printer = *stack;
-	(void)line_number;
-
 	while (printer)
 	{
-		dprintf(STDERR_FILENO, "%d\n", printer->n);
+		fprintf(stdout, "%d\n", printer->n);
 		printer = printer->next;
 	}
 
