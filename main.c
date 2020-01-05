@@ -1,7 +1,5 @@
 #include "monty.h"
 
-unsigned int line_number = 0;
-
 /**
  * main - Monty
  * @argc: int
@@ -22,14 +20,13 @@ int main(int argc, char *argv[])
 	if (!commander)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
-		fclose(commander);
 		exit(EXIT_FAILURE);
 	}
 
 	char *liners = NULL, *opcode = NULL;
 	size_t n = 0;
 	stack_t *stack = NULL;
-
+	unsigned int line_number = 0;
 	while (getline(&liners, &n, commander) != -1)
 	{
 		line_number++;
