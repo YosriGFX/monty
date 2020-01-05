@@ -7,9 +7,9 @@
  */
 int main(__attribute__((unused)) int argc, char **argv)
 {
-	FILE *commander;
+	FILE *commander = NULL;
 	char *liners = NULL;
-	char *opcode;
+	char *opcode = NULL;
 	size_t n = 0;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0;

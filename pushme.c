@@ -21,8 +21,10 @@ void pushme(stack_t **stack, unsigned int line_number)
 		new->n = atoi(argument);
 		new->next = (*stack);
 		new->prev = NULL;
-		if ((*stack) != NULL)
+		if (*stack)
+		{
 			(*stack)->prev = new;
+		}
 		*stack = new;
 	}
 	else
