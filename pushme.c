@@ -4,7 +4,6 @@
  * @stack: double pointer
  * @line_number: line number
  */
-
 void pushme(stack_t **stack, unsigned int line_number)
 {
 	char *argument = NULL;
@@ -16,7 +15,7 @@ void pushme(stack_t **stack, unsigned int line_number)
 		{
 			fprintf(stderr, "Error: malloc failed\n");
 			exit(EXIT_FAILURE);
-		}		
+		}
 	}
 	else
 	{

@@ -7,10 +7,12 @@
 int ifdigit(char *argument)
 {
 	size_t a = 0;
+
 	for (a = 0; a < strlen(argument); a++)
 	{
-		if (argument[a] > '9' || argument[a] < '0') 
+		if (argument[a] > '9' || argument[a] < '0')
 			return (0);
 	}
 	return (1);
 }
+
