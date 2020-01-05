@@ -5,7 +5,7 @@
  * @argv: str
  * Return: EXIT_SUCCESS on success or EXIT_FAILURE on failure
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	FILE *commander;
 	char *liners = NULL;
