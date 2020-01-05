@@ -11,11 +11,19 @@ void pushme(stack_t **stack, unsigned int line_number)
 	argument = strtok(NULL, "\n\r\t ");
 	if (argument != NULL && ifdigit(argument) == 1)
 	{
-		if (!_push(stack, atoi(argument)))
+		stack_t *new = malloc(sizeof(stack_t));
+
+		if (!new)
 		{
 			fprintf(stderr, "Error: malloc failed\n");
 			exit(EXIT_FAILURE);
 		}
+		new->n = atoi(argument);
+		new->next = (*stack);
+		new->prev = NULL;
+		if ((*stack) != NULL)
+			(*stack)->prev = new;
+		*stack = new;
 	}
 	else
 	{
