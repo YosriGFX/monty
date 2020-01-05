@@ -24,6 +24,8 @@ void intrepit(char *opcode, unsigned int line_number, stack_t **stack)
 	{
 		if (opcode == NULL)
 			return;
+		if (strcmp(opcode, "nop") == 0)
+			return;
 		if (strcmp(Operation[i].opcode, opcode) == 0)
 		{
 			Operation[i].f(stack, line_number);
