@@ -8,15 +8,25 @@ void swapme(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
 	int b, a;
 	stack_t *kdim;
-
-	if ((*stack)->next == NULL || stack == NULL)
+	if (*stack != NULL)
+	{
+		if ((*stack)->next != NULL)
+		{
+			kdim = (*stack)->next;
+			a = kdim->n;
+			b = (*stack)->n;
+			(*stack)->n = a;
+			kdim->n = b;
+		}
+		else
+		{
+			fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+			exit(EXIT_FAILURE);
+		}
+	}
+	else
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	kdim = (*stack)->next;
-	a = kdim->n;
-	b = (*stack)->n;
-	(*stack)->n = a;
-	kdim->n = b;
 }
