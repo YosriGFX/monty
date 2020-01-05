@@ -1,5 +1,5 @@
 #!/bin/bash
-for a in {1..50}
+for a in {100..101}
 do
 	touch $a
 	git add $a
