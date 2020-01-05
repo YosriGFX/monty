@@ -41,5 +41,6 @@ int ifdigit(char *argument);
 void pushme(stack_t **stack, unsigned int line_number);
 stack_t *_push(stack_t **stack, const int n);
 void pallme(stack_t **stack, unsigned int line_number);
+void pintme(stack_t **stack, unsigned int line_number);
 
 #endif

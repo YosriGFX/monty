@@ -13,6 +13,7 @@ void intrepit(char *opcode, unsigned int line_number, stack_t **stack)
 	instruction_t Operation[] = {
 		{"push", pushme},
 		{"pall", pallme},
+		{"pint", pintme},
 		{NULL, NULL}
 	};
 
