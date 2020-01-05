@@ -43,5 +43,6 @@ void pallme(stack_t **stack, unsigned int line_number);
 void pintme(stack_t **stack, unsigned int line_number);
 void popme(stack_t **stack, unsigned int line_number);
 void swapme(stack_t **stack, unsigned int line_number);
+void addme(stack_t **stack, unsigned int line_number);
 
 #endif

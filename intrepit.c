@@ -16,21 +16,21 @@ void intrepit(char *opcode, unsigned int line_number, stack_t **stack)
 		{"pint", pintme},
 		{"pop", popme},
 		{"swap", swapme},
+		{"add", addme},
 		{NULL, NULL}
 	};
 
 	for (i = 0; Operation[i].opcode != NULL; i++)
 	{
+		if (opcode == NULL)
+			return;
 		if (strcmp(Operation[i].opcode, opcode) == 0)
 		{
 			Operation[i].f(stack, line_number);
 			return;
 		}
-		else if (Operation[i + 1].opcode == NULL)
-		{
-			fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
-			exit(EXIT_FAILURE);
-		}
 	}
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
+	exit(EXIT_FAILURE);
 }
 
