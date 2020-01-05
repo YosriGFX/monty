@@ -9,7 +9,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 {
 	FILE *commander;
 	char *liners = NULL;
-	char *opcode = NULL;
+	char *opcode;
 	size_t n = 0;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0;
@@ -31,13 +31,9 @@ int main(__attribute__((unused)) int argc, char **argv)
 		opcode = strtok(liners, "\n\r\t ");
 		intrepit(opcode, line_number, &stack);
 	}
-	while (stack != NULL)
-	{
-		stack = stack->next;
-		free(stack);
-	}
 	fclose(commander);
 	free(liners);
+	free(stack);
 	exit(EXIT_SUCCESS);
 }
 
