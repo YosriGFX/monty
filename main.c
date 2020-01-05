@@ -25,13 +25,8 @@ int main(int argc, char *argv[])
 	char *liners = NULL, *opcode = NULL;
 	unsigned int line_number = 0;
 	size_t n = 0;
-	stack_t *stack = malloc(sizeof(stack_t));
+	stack_t *stack = NULL;
 
-	if (!stack)
-	{
-		dprintf(STDERR_FILENO, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
-	}
 	while (getline(&liners, &n, commander) != -1)
 	{
 		line_number++;

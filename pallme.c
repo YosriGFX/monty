@@ -11,7 +11,7 @@ void pallme(stack_t **stack, unsigned int line_number)
 	if (!printer)
 		dprintf(STDERR_FILENO, "error line: %u", line_number);
 	printer = *stack;
-	while (printer->next != NULL)
+	while (printer)
 	{
 		dprintf(STDERR_FILENO, "%d\n", printer->n);
 		printer = printer->next;
