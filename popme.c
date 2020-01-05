@@ -6,7 +6,7 @@
  */
 void popme(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
-	stack_t *dell = malloc(sizeof(stack_t));
+	stack_t *dell;
 
 	if (*stack == NULL || stack == NULL)
 	{
