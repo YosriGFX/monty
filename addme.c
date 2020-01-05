@@ -19,6 +19,6 @@ void addme(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 			return;
 		}
 	}
-	fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+	fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 }
