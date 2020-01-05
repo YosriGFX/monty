@@ -31,10 +31,7 @@ int main(int argc, char *argv[])
 	{
 		line_number++;
 		opcode = strtok(liners, "\n\r\t ");
-		if (opcode != NULL && opcode[0] != '#')
-		{
-			intrepit(opcode, line_number, &stack);
-		}
+		intrepit(opcode, line_number, &stack);
 	}
 	free(stack);
 	free(liners);
