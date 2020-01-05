@@ -17,6 +17,7 @@ void swapme(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 			(*stack)->n = a;
 			return;
 		}
+		free(*stack);
 	}
 	fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 	exit(EXIT_FAILURE);

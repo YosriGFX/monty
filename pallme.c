@@ -4,11 +4,9 @@
  * @stack: double pointer
  * @line_number: line number
  */
-void pallme(stack_t **stack, unsigned int line_number)
+void pallme(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
 	stack_t *printer = *stack;
-	(void)line_number;
-
 	if (*stack == NULL || stack == NULL)
 		return;
 	while (printer)
