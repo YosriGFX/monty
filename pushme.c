@@ -10,7 +10,7 @@ void pushme(stack_t **stack, unsigned int line_number)
 	char *argument = NULL;
 
 	argument = strtok(NULL, "\n\r\t ");
-	if (argument != NULL && ifdigit(argument))
+	if (argument != NULL && ifdigit(argument) == 1)
 	{
 		if (!_push(stack, atoi(argument)))
 		{
