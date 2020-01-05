@@ -10,8 +10,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
-		fflush(stdout);
+		dprintf(STDERR_FILENO,"USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	FILE *commander;
@@ -19,8 +18,7 @@ int main(int argc, char *argv[])
 	commander = fopen(argv[1], "r");
 	if (!commander)
 	{
-		printf("Error: Can't open file %s\n", argv[1]);
-		fflush(stdout);
+		dprintf(STDERR_FILENO,"Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
@@ -31,8 +29,7 @@ int main(int argc, char *argv[])
 
 	if (!stack)
 	{
-		printf("Error: malloc failed\n");
-		fflush(stdout);
+		dprintf(STDERR_FILENO,"Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 	while (getline(&liners, &n, commander) != -1)

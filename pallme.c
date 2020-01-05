@@ -9,11 +9,11 @@ void pallme(stack_t **stack, unsigned int line_number)
 	stack_t *printer = malloc(sizeof(stack_t));
 
 	if (!printer)
-		printf("error line: %u", line_number);
+		dprintf(STDERR_FILENO,"error line: %u", line_number);
 	printer = *stack;
 	while (printer->next != NULL)
 	{
-		printf("%d\n", printer->n);
+		dprintf(STDERR_FILENO,"%d\n", printer->n);
 		printer = printer->next;
 	}
 
