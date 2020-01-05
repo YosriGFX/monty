@@ -5,7 +5,7 @@
  * @argv: str
  * Return: EXIT_SUCCESS on success or EXIT_FAILURE on failure
  */
-int main(int argc, char **argv)
+int main(__attribute__((unused)) int argc, char **argv)
 {
 	FILE *commander;
 	char *liners = NULL;
@@ -31,9 +31,13 @@ int main(int argc, char **argv)
 		opcode = strtok(liners, "\n\r\t ");
 		intrepit(opcode, line_number, &stack);
 	}
-	free(stack);
-	free(liners);
+	while (stack != NULL)
+	{
+		stack = stack->next;
+		free(stack);
+	}
 	fclose(commander);
+	free(liners);
 	exit(EXIT_SUCCESS);
 }
 
