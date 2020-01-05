@@ -10,11 +10,11 @@ void swapme(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 	{
 		if ((*stack)->next != NULL)
 		{
-			int a, b;
+			int a;
+
 			a = (*stack)->next->n;
-			b = (*stack)->n;
+			(*stack)->next->n = (*stack)->n;
 			(*stack)->n = a;
-			(*stack)->next->n = b;
 			return;
 		}
 	}
