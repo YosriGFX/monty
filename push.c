@@ -15,6 +15,6 @@ stack_t *_push(stack_t **stack, const int n)
 	if ((*stack) != NULL)
 		(*stack)->prev = new;
 	*stack = new;
-	return(*stack);
+	return (*stack);
 }
 
