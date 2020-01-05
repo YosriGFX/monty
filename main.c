@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	char *liners = NULL, *opcode = NULL;
 	unsigned int line_number = 0;
-	size_t n;
+	size_t n = 0;
 	stack_t *stack = malloc(sizeof(stack_t));
 
 	if (!stack)
@@ -42,6 +42,9 @@ int main(int argc, char *argv[])
 		}
 	}
 	free(stack);
+	free(liners);
+	free(opcode);
+	
 	fclose(commander);
 	exit(EXIT_SUCCESS);
 }

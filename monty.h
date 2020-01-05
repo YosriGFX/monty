@@ -38,7 +38,6 @@ typedef struct instruction_s
 		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
 void intrepit(char *opcode, unsigned int line_number, stack_t **stack);
 int ifdigit(char *argument);
 void pushme(stack_t **stack, unsigned int line_number);
