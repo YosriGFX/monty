@@ -13,7 +13,7 @@ void pallme(stack_t **stack, unsigned int line_number)
 		return;
 	while (printer)
 	{
-		fprintf(stdout, "%d\n", printer->n);
+		printf("%d\n", printer->n);
 		printer = printer->next;
 	}
 

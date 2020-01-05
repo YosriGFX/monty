@@ -12,5 +12,5 @@ void pintme(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	else
-		fprintf(stdout, "%u\n", (*stack)->n);
+		printf("%u\n", (*stack)->n);
 }
