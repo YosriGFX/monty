@@ -25,5 +25,6 @@ void intrepit(char *opcode, unsigned int line_number, stack_t **stack)
 		}
 	}
 	dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n",	line_number, opcode);
+	free(stack);
 	exit(EXIT_FAILURE);
 }

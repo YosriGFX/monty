@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 	if (!commander)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
+		fclose(commander);
 		exit(EXIT_FAILURE);
 	}
 
