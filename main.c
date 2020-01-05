@@ -26,16 +26,24 @@ int main(int argc, char *argv[])
 
 	char *liners = NULL, *opcode = NULL;
 	unsigned int line_number = 0;
-	size_t n = 0;
+	size_t n;
+	stack_t *stack = malloc(sizeof(stack_t));
 
+	if (!stack)
+	{
+		printf("Error: malloc failed\n");
+		fflush(stdout);
+		exit(EXIT_FAILURE);
+	}
 	while (getline(&liners, &n, commander) != -1)
 	{
 		line_number++;
 		opcode = strtok(liners, "\n\r\t ");
 		if (opcode != NULL && opcode[0] != '#')
 		{
-			intrepit(opcode, line_number);
+			intrepit(opcode, line_number, &stack);
 		}
 	}
+	free(stack);
 	exit(EXIT_SUCCESS);
 }
