@@ -14,6 +14,7 @@ void intrepit(char *opcode, unsigned int line_number, stack_t **stack)
 		{"push", pushme},
 		{"pall", pallme},
 		{"pint", pintme},
+		{"pop", popme},
 		{NULL, NULL}
 	};
 
