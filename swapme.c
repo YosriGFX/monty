@@ -6,17 +6,15 @@
  */
 void swapme(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
-	int b, a;
-	stack_t *kdim;
 	if (*stack != NULL)
 	{
 		if ((*stack)->next != NULL)
 		{
-			kdim = (*stack)->next;
-			a = kdim->n;
+			int a, b;
+			a = (*stack)->next->n;
 			b = (*stack)->n;
 			(*stack)->n = a;
-			kdim->n = b;
+			(*stack)->next->n = b;
 			return;
 		}
 	}
