@@ -5,9 +5,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-
-#define instruction_t _instruction_t
-#define stack_t _stack_t
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
