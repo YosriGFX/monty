@@ -9,9 +9,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#define stack_t _stack_t
-#define instruction_t _instruction_t
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
