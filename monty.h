@@ -1,5 +1,5 @@
-#ifndef holberton_h
-#define holberton_h
+#ifndef monty_h
+#define monty_h
 
 #include <stdio.h>
 #include <stdlib.h>
