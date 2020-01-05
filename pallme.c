@@ -7,7 +7,7 @@
 void pallme(stack_t **stack, unsigned int line_number)
 {
 	stack_t *printer = *stack;
-        (void)line_number;
+	(void)line_number;
 
 	if (*stack == NULL)
 		return;
