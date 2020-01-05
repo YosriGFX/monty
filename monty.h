@@ -9,6 +9,9 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+#define stack_t _stack_t
+#define instruction_t _instruction_t
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -23,7 +26,7 @@ typedef struct stack_s
 		int n;
 		struct stack_s *prev;
 		struct stack_s *next;
-} _stack_t;
+} stack_t;
 
 /**
  * struct instruction_s - opcode and its function
@@ -37,6 +40,9 @@ typedef struct instruction_s
 {
 		char *opcode;
 		void (*f)(stack_t **stack, unsigned int line_number);
-} _instruction_t;
+} instruction_t;
+
+void intrepit(char *opcode, unsigned int line_number);
+int ifdigit(char *argument);
 
 #endif
