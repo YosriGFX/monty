@@ -1,0 +1,8 @@
+#!/bin/bash
+for a in {1..50}
+do
+	git add $a
+	git commit -m $a
+	rm $a
+	git add --all;
+done
