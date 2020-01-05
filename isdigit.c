@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _isdigit - function that checks for a digit (0 through 9).
- * @c: int
- * Return: 1 if c is a digit
+ * ifdigit - function that checks for a digit (0 through 9).
+ * @argument: char
+ * Return: 1 if argument is a digit
  */
 int ifdigit(char *argument)
 {

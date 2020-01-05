@@ -44,5 +44,7 @@ typedef struct instruction_s
 
 void intrepit(char *opcode, unsigned int line_number);
 int ifdigit(char *argument);
+void pushme(stack_t **stack, unsigned int line_number);
+void pallme(stack_t **stack, unsigned int line_number);
 
 #endif

@@ -5,18 +5,26 @@
  * @line_number: int
  * Return: EXIT_SUCCESS on success or EXIT_FAILURE on failure
  */
+
 void intrepit(char *opcode, unsigned int line_number)
 {
+	size_t i;
 	instruction_t Operation[] = {
 		{"push", pushme},
 		{"pall", pallme},
 		{NULL, NULL}
 	};
-	char *argument = NULL;
-	size_t n = 0;
-	argument = strtok(NULL , "\n\r\t ");
-	if (argument && ifdigit(argument))
-		n = atoi(argument);
-	printf("%s L:%i - %zu\n", opcode, line_number, n);
+	stack_t **stack = NULL;
 
+	for (i = 0; Operation[i].opcode != NULL; i++)
+	{
+		if (strcmp(Operation[i].opcode, opcode) == 0)
+		{
+			Operation[i].f(stack, line_number);
+			printf("valid\n");
+			return;
+		}
+	}
+	printf("L%u: unknown instruction %s\n",	line_number, opcode);
+	exit(EXIT_FAILURE);
 }
