@@ -1,5 +1,4 @@
-
-### The Monty language
+# The Monty language
 
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
@@ -62,7 +61,8 @@ julien@ubuntu:~/monty$
 -   If you can’t malloc anymore, print the error message  `Error: malloc failed`, followed by a new line, and exit with status  `EXIT_FAILURE`.
 -   You have to use  `malloc`  and  `free`  and are not allowed to use any other function from  `man malloc`  (realloc, calloc, …)
 
-### Authors
+```Proudly written by Yosri Ghorbel```
 
-* Yosri Ghorbel
-* Rakia Somai
+![Yosri Ghorbel](https://pbs.twimg.com/media/E3YEO7kXwAU9x6x?format=png&name=4096x4096)
+
+> Copyright © 2021 [Holberton School](https://www.holbertonschool.com). All rights reserved.
